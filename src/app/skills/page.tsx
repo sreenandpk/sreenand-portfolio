@@ -31,13 +31,13 @@ export default function SkillsPage() {
       <JsonLd data={[webPageSchema, breadcrumbSchema]} />
       <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8 space-y-8">
         <div>
-          <span className="font-mono text-xs font-semibold uppercase tracking-wider text-emerald-400">
+          <span className="font-mono text-xs font-semibold uppercase tracking-wider text-emerald-700">
             Technology Stack
           </span>
-          <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-neutral-100 sm:text-5xl">
+          <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-zinc-900 sm:text-5xl">
             Detailed Technical Skills Matrix
           </h1>
-          <p className="mt-4 text-base sm:text-lg text-neutral-300 leading-relaxed max-w-2xl">
+          <p className="mt-4 text-base sm:text-lg text-zinc-600 leading-relaxed max-w-2xl">
             Categorized overview of programming languages, backend frameworks, frontend engines, cloud infrastructure, and AI engineering stack.
           </p>
         </div>
@@ -47,9 +47,9 @@ export default function SkillsPage() {
             const categorySkills = skillsData.filter((s) => s.category === category);
             return (
               <Card key={category}>
-                <h2 className="text-lg font-bold text-neutral-100 font-mono border-b border-neutral-800 pb-3 mb-4 flex items-center justify-between">
+                <h2 className="text-lg font-bold text-zinc-900 font-mono border-b border-zinc-200/80 pb-3 mb-4 flex items-center justify-between">
                   <span>{category}</span>
-                  <span className="text-xs font-normal text-emerald-400">
+                  <span className="text-xs font-normal text-emerald-700">
                     {categorySkills.length} Technologies
                   </span>
                 </h2>

@@ -5,7 +5,7 @@ import { SectionHeading } from '@/components/ui/section-heading';
 
 export function ArticlesPreview() {
   return (
-    <section className="py-12 sm:py-16 border-b border-neutral-800/80">
+    <section className="py-12 sm:py-16 border-b border-zinc-200/80">
       <SectionHeading
         title="Technical Writing & Thought Leadership"
         description="Engineering articles establishing technical authority and architectural insights."

@@ -10,13 +10,13 @@ export function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-neutral-800/80 bg-neutral-950/90 backdrop-blur-md">
+    <header className="sticky top-0 z-40 w-full border-b border-zinc-200/80 bg-white/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <Link
           href="/"
-          className="group flex items-center space-x-2 font-mono text-lg font-bold text-neutral-100 focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded"
+          className="group flex items-center space-x-2 font-mono text-lg font-bold text-zinc-900 focus:outline-none focus:ring-2 focus:ring-emerald-600 rounded"
         >
-          <span className="text-emerald-400 group-hover:text-emerald-300 transition-colors">
+          <span className="text-emerald-700 group-hover:text-emerald-800 transition-colors">
             &gt;
           </span>
           <span>{siteConfig.name}</span>
@@ -31,10 +31,10 @@ export function Header() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className={`px-3 py-1.5 text-sm font-medium rounded transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500 ${
+                    className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-600 ${
                       isActive
-                        ? 'bg-neutral-800 text-emerald-400 font-semibold'
-                        : 'text-neutral-300 hover:text-emerald-400 hover:bg-neutral-900'
+                        ? 'bg-zinc-100 text-zinc-900 font-semibold border border-zinc-200/80'
+                        : 'text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100/60'
                     }`}
                   >
                     {item.label}
@@ -51,7 +51,7 @@ export function Header() {
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-expanded={mobileMenuOpen}
           aria-label="Toggle navigation menu"
-          className="md:hidden p-2 text-neutral-300 hover:text-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded"
+          className="md:hidden p-2 text-zinc-600 hover:text-zinc-900 focus:outline-none focus:ring-2 focus:ring-emerald-600 rounded"
         >
           <svg
             className="w-6 h-6"
@@ -80,7 +80,7 @@ export function Header() {
 
       {/* Mobile Drawer Navigation */}
       {mobileMenuOpen && (
-        <nav aria-label="Mobile Navigation" className="md:hidden border-t border-neutral-800 bg-neutral-950 px-4 py-4">
+        <nav aria-label="Mobile Navigation" className="md:hidden border-t border-zinc-200 bg-white px-4 py-4 shadow-sm">
           <ul className="flex flex-col space-y-2">
             {siteConfig.navItems.map((item) => {
               const isActive = pathname === item.href;
@@ -91,8 +91,8 @@ export function Header() {
                     onClick={() => setMobileMenuOpen(false)}
                     className={`block px-3 py-2 text-base font-medium rounded transition-colors ${
                       isActive
-                        ? 'bg-neutral-800 text-emerald-400 font-semibold'
-                        : 'text-neutral-300 hover:text-emerald-400 hover:bg-neutral-900'
+                        ? 'bg-zinc-100 text-zinc-900 font-semibold'
+                        : 'text-zinc-600 hover:text-zinc-900 hover:bg-zinc-50'
                     }`}
                   >
                     {item.label}

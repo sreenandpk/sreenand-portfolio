@@ -29,44 +29,44 @@ export default function ExperiencePage() {
       <JsonLd data={[webPageSchema, breadcrumbSchema]} />
       <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8 space-y-8">
         <div>
-          <span className="font-mono text-xs font-semibold uppercase tracking-wider text-emerald-400">
+          <span className="font-mono text-xs font-semibold uppercase tracking-wider text-emerald-700">
             Career Record
           </span>
-          <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-neutral-100 sm:text-5xl">
+          <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-zinc-900 sm:text-5xl">
             Professional Experience Timeline
           </h1>
-          <p className="mt-4 text-base sm:text-lg text-neutral-300 leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg text-zinc-600 leading-relaxed">
             Software development history, core technical contributions, and system responsibilities.
           </p>
         </div>
 
         <div className="space-y-8 pt-4">
           {experienceData.map((exp) => (
-            <div key={exp.id} className="relative pl-6 sm:pl-8 border-l-2 border-emerald-500/40">
-              <div className="absolute -left-[9px] top-0 h-4 w-4 rounded-full border-2 border-emerald-500 bg-neutral-950" />
+            <div key={exp.id} className="relative pl-6 sm:pl-8 border-l-2 border-emerald-600">
+              <div className="absolute -left-[9px] top-0 h-4 w-4 rounded-full border-2 border-emerald-600 bg-white" />
               <Card>
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-neutral-800 pb-4 mb-4">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-zinc-200/80 pb-4 mb-4">
                   <div>
-                    <h2 className="text-xl font-bold text-neutral-100">{exp.role}</h2>
-                    <p className="text-sm font-medium text-emerald-400 font-mono mt-0.5">
+                    <h2 className="text-xl font-bold text-zinc-900">{exp.role}</h2>
+                    <p className="text-sm font-medium text-emerald-700 font-mono mt-0.5">
                       {exp.company} {exp.location && `• ${exp.location}`}
                     </p>
                   </div>
-                  <span className="text-xs font-mono text-neutral-400 bg-neutral-800/80 px-3 py-1 rounded border border-neutral-700/50 shrink-0 self-start sm:self-auto">
+                  <span className="text-xs font-mono text-zinc-600 bg-zinc-100 px-3 py-1 rounded border border-zinc-200/80 shrink-0 self-start sm:self-auto">
                     {exp.startDate} — {exp.endDate || 'Present'}
                   </span>
                 </div>
 
-                <p className="text-sm text-neutral-300 leading-relaxed">
+                <p className="text-sm text-zinc-700 leading-relaxed">
                   {exp.description}
                 </p>
 
                 {exp.highlights && exp.highlights.length > 0 && (
                   <div className="mt-4">
-                    <h3 className="text-xs font-mono font-semibold uppercase text-neutral-400 mb-2">
+                    <h3 className="text-xs font-mono font-semibold uppercase text-zinc-500 mb-2">
                       Key Technical Responsibilities
                     </h3>
-                    <ul className="space-y-1.5 text-xs text-neutral-300 list-disc list-inside">
+                    <ul className="space-y-1.5 text-xs text-zinc-600 list-disc list-inside">
                       {exp.highlights.map((highlight, idx) => (
                         <li key={idx}>{highlight}</li>
                       ))}
@@ -74,7 +74,7 @@ export default function ExperiencePage() {
                   </div>
                 )}
 
-                <div className="mt-6 pt-4 border-t border-neutral-800/80 flex flex-wrap gap-1.5">
+                <div className="mt-6 pt-4 border-t border-zinc-200/80 flex flex-wrap gap-1.5">
                   {exp.technologies.map((tech) => (
                     <Badge key={tech}>{tech}</Badge>
                   ))}
@@ -85,44 +85,44 @@ export default function ExperiencePage() {
         </div>
 
         {/* Categorized Technical Domain Competencies */}
-        <div className="space-y-6 pt-8 border-t border-neutral-800/80">
-          <h2 className="text-2xl font-bold text-neutral-100">Engineering Capability Breakdown</h2>
+        <div className="space-y-6 pt-8 border-t border-zinc-200/80">
+          <h2 className="text-2xl font-bold text-zinc-900">Engineering Capability Breakdown</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-xs font-mono">
             <Card className="p-4">
-              <span className="text-emerald-400 font-bold">Backend</span>
-              <p className="mt-2 text-neutral-300">Python, Django, FastAPI, REST APIs, SQLAlchemy</p>
+              <span className="text-emerald-700 font-bold">Backend</span>
+              <p className="mt-2 text-zinc-600">Python, Django, FastAPI, REST APIs, SQLAlchemy</p>
             </Card>
             <Card className="p-4">
-              <span className="text-emerald-400 font-bold">Frontend</span>
-              <p className="mt-2 text-neutral-300">React, Next.js, TypeScript, Tailwind CSS</p>
+              <span className="text-emerald-700 font-bold">Frontend</span>
+              <p className="mt-2 text-zinc-600">React, Next.js, TypeScript, Tailwind CSS</p>
             </Card>
             <Card className="p-4">
-              <span className="text-emerald-400 font-bold">Databases</span>
-              <p className="mt-2 text-neutral-300">PostgreSQL, Supabase, Alembic</p>
+              <span className="text-emerald-700 font-bold">Databases</span>
+              <p className="mt-2 text-zinc-600">PostgreSQL, Supabase, Alembic</p>
             </Card>
             <Card className="p-4">
-              <span className="text-emerald-400 font-bold">Distributed Systems</span>
-              <p className="mt-2 text-neutral-300">Microservices, Redis, Celery</p>
+              <span className="text-emerald-700 font-bold">Distributed Systems</span>
+              <p className="mt-2 text-zinc-600">Microservices, Redis, Celery</p>
             </Card>
             <Card className="p-4">
-              <span className="text-emerald-400 font-bold">AI / RAG</span>
-              <p className="mt-2 text-neutral-300">Gemini, LangGraph, RAG, Qdrant, LLM Apps</p>
+              <span className="text-emerald-700 font-bold">AI / RAG</span>
+              <p className="mt-2 text-zinc-600">Gemini, LangGraph, RAG, Qdrant, LLM Apps</p>
             </Card>
             <Card className="p-4">
-              <span className="text-emerald-400 font-bold">Cloud & K8s</span>
-              <p className="mt-2 text-neutral-300">Azure, AKS, ACR, Kubernetes</p>
+              <span className="text-emerald-700 font-bold">Cloud & K8s</span>
+              <p className="mt-2 text-zinc-600">Azure, AKS, ACR, Kubernetes</p>
             </Card>
             <Card className="p-4">
-              <span className="text-emerald-400 font-bold">CI/CD & DevOps</span>
-              <p className="mt-2 text-neutral-300">Jenkins, Docker, GitHub, Git-SHA Tagging</p>
+              <span className="text-emerald-700 font-bold">CI/CD & DevOps</span>
+              <p className="mt-2 text-zinc-600">Jenkins, Docker, GitHub, Git-SHA Tagging</p>
             </Card>
             <Card className="p-4">
-              <span className="text-emerald-400 font-bold">Testing & Security</span>
-              <p className="mt-2 text-neutral-300">Pytest, Pytest-Asyncio, Locust, Semgrep, pip-audit</p>
+              <span className="text-emerald-700 font-bold">Testing & Security</span>
+              <p className="mt-2 text-zinc-600">Pytest, Pytest-Asyncio, Locust, Semgrep, pip-audit</p>
             </Card>
             <Card className="p-4">
-              <span className="text-emerald-400 font-bold">Observability</span>
-              <p className="mt-2 text-neutral-300">Prometheus, Grafana, Alertmanager, Slack</p>
+              <span className="text-emerald-700 font-bold">Observability</span>
+              <p className="mt-2 text-zinc-600">Prometheus, Grafana, Alertmanager, Slack</p>
             </Card>
           </div>
         </div>

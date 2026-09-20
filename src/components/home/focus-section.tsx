@@ -37,7 +37,7 @@ export function FocusSection() {
   ];
 
   return (
-    <section className="py-12 sm:py-16 border-b border-neutral-800/80">
+    <section className="py-12 sm:py-16 border-b border-zinc-200/80">
       <SectionHeading
         title="Technical Engineering Focus"
         description="Core domain specializations across full-stack development, cloud architecture, and AI engineering."
@@ -46,11 +46,11 @@ export function FocusSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {focusAreas.map((area) => (
           <Card key={area.title}>
-            <h3 className="text-lg font-bold text-neutral-100 flex items-center gap-2">
-              <span className="text-emerald-400 font-mono text-sm">#</span>
+            <h3 className="text-lg font-bold text-zinc-900 flex items-center gap-2">
+              <span className="text-emerald-700 font-mono text-sm">#</span>
               <span>{area.title}</span>
             </h3>
-            <p className="mt-3 text-sm text-neutral-400 leading-relaxed">
+            <p className="mt-3 text-sm text-zinc-600 leading-relaxed">
               {area.description}
             </p>
           </Card>

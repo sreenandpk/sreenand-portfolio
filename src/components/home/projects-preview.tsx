@@ -7,7 +7,7 @@ export function ProjectsPreview() {
   const featuredProjects = projectsData.filter((p) => p.featured);
 
   return (
-    <section className="py-12 sm:py-16 border-b border-neutral-800/80">
+    <section className="py-12 sm:py-16 border-b border-zinc-200/80">
       <SectionHeading
         title="Selected Projects"
         description="Architecture, technical decisions, and implementation case studies."

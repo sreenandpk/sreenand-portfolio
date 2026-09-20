@@ -26,21 +26,21 @@ export default function ContactPage() {
       <JsonLd data={[webPageSchema, breadcrumbSchema]} />
       <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8 space-y-8">
         <div>
-          <span className="font-mono text-xs font-semibold uppercase tracking-wider text-emerald-400">
+          <span className="font-mono text-xs font-semibold uppercase tracking-wider text-emerald-700">
             Get In Touch
           </span>
-          <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-neutral-100 sm:text-5xl">
+          <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-zinc-900 sm:text-5xl">
             Contact {author.name}
           </h1>
-          <p className="mt-4 text-base sm:text-lg text-neutral-300 leading-relaxed max-w-2xl">
+          <p className="mt-4 text-base sm:text-lg text-zinc-600 leading-relaxed max-w-2xl">
             Interested in discussing engineering opportunities, backend architectural design, or Generative AI / RAG system development?
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
-          <Card className="space-y-4 border-emerald-500/30">
-            <h2 className="text-xl font-bold text-neutral-100">Direct Profiles & Links</h2>
-            <p className="text-sm text-neutral-300">
+          <Card className="space-y-4">
+            <h2 className="text-xl font-bold text-zinc-900">Direct Profiles & Links</h2>
+            <p className="text-sm text-zinc-600">
               Connect through social channels or explore public repositories:
             </p>
             <div className="flex flex-col gap-3 pt-2">
@@ -54,17 +54,12 @@ export default function ContactPage() {
                   LinkedIn Profile
                 </Button>
               )}
-              {author.socials.instagram && (
-                <Button href={author.socials.instagram} variant="outline" className="justify-start font-mono text-xs sm:text-sm">
-                  Instagram Profile
-                </Button>
-              )}
             </div>
           </Card>
 
           <Card className="space-y-4">
-            <h2 className="text-xl font-bold text-neutral-100">Direct Contact</h2>
-            <p className="text-sm text-neutral-300">
+            <h2 className="text-xl font-bold text-zinc-900">Direct Contact</h2>
+            <p className="text-sm text-zinc-600">
               {author.title} experienced in Python, Django, FastAPI, React, Next.js, PostgreSQL, Docker, Kubernetes, AWS, and RAG systems.
             </p>
 
@@ -72,7 +67,7 @@ export default function ContactPage() {
               <div className="pt-2">
                 <a
                   href={`tel:${author.socials.phone}`}
-                  className="inline-flex items-center space-x-2 font-mono text-sm font-semibold text-emerald-400 hover:text-emerald-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded transition-colors"
+                  className="inline-flex items-center space-x-2 font-mono text-sm font-semibold text-emerald-700 hover:text-emerald-800 focus:outline-none focus:ring-2 focus:ring-emerald-600 rounded transition-colors"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path

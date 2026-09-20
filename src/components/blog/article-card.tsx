@@ -10,24 +10,24 @@ interface ArticleCardProps {
 
 export function ArticleCard({ article }: ArticleCardProps) {
   return (
-    <Card className="group hover:border-emerald-500/40 transition-colors">
-      <div className="flex items-center justify-between text-xs font-mono text-neutral-400">
+    <Card className="group hover:border-zinc-300 transition-all">
+      <div className="flex items-center justify-between text-xs font-mono text-zinc-500">
         <time dateTime={article.publishedAt}>{article.publishedAt}</time>
         {article.readingTimeMinutes && (
           <span>{article.readingTimeMinutes} min read</span>
         )}
       </div>
 
-      <h3 className="mt-3 text-lg font-bold text-neutral-100 group-hover:text-emerald-400 transition-colors">
+      <h3 className="mt-3 text-lg font-bold text-zinc-900 group-hover:text-emerald-700 transition-colors">
         <Link
           href={`/blog/${article.slug}`}
-          className="focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded"
+          className="focus:outline-none focus:ring-2 focus:ring-emerald-600 rounded"
         >
           {article.title}
         </Link>
       </h3>
 
-      <p className="mt-2 text-sm text-neutral-300 leading-relaxed">
+      <p className="mt-2 text-sm text-zinc-600 leading-relaxed">
         {article.description}
       </p>
 

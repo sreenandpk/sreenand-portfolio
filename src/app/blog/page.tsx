@@ -28,13 +28,13 @@ export default function BlogPage() {
       <JsonLd data={[webPageSchema, breadcrumbSchema]} />
       <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8 space-y-8">
         <div>
-          <span className="font-mono text-xs font-semibold uppercase tracking-wider text-emerald-400">
+          <span className="font-mono text-xs font-semibold uppercase tracking-wider text-emerald-700">
             Publications
           </span>
-          <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-neutral-100 sm:text-5xl">
+          <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-zinc-900 sm:text-5xl">
             Engineering Articles & Writing
           </h1>
-          <p className="mt-4 text-base sm:text-lg text-neutral-300 leading-relaxed max-w-2xl">
+          <p className="mt-4 text-base sm:text-lg text-zinc-600 leading-relaxed max-w-2xl">
             Technical writing on RAG system architecture, Python microservices, database optimizations, and Next.js performance.
           </p>
         </div>
