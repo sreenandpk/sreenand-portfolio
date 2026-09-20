@@ -64,7 +64,7 @@ export default function ExperiencePage() {
                 {exp.highlights && exp.highlights.length > 0 && (
                   <div className="mt-4">
                     <h3 className="text-xs font-mono font-semibold uppercase text-neutral-400 mb-2">
-                      Key Technical Contributions
+                      Key Technical Responsibilities
                     </h3>
                     <ul className="space-y-1.5 text-xs text-neutral-300 list-disc list-inside">
                       {exp.highlights.map((highlight, idx) => (
@@ -82,6 +82,49 @@ export default function ExperiencePage() {
               </Card>
             </div>
           ))}
+        </div>
+
+        {/* Categorized Technical Domain Competencies */}
+        <div className="space-y-6 pt-8 border-t border-neutral-800/80">
+          <h2 className="text-2xl font-bold text-neutral-100">Engineering Capability Breakdown</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-xs font-mono">
+            <Card className="p-4">
+              <span className="text-emerald-400 font-bold">Backend</span>
+              <p className="mt-2 text-neutral-300">Python, Django, FastAPI, REST APIs, SQLAlchemy</p>
+            </Card>
+            <Card className="p-4">
+              <span className="text-emerald-400 font-bold">Frontend</span>
+              <p className="mt-2 text-neutral-300">React, Next.js, TypeScript, Tailwind CSS</p>
+            </Card>
+            <Card className="p-4">
+              <span className="text-emerald-400 font-bold">Databases</span>
+              <p className="mt-2 text-neutral-300">PostgreSQL, Supabase, Alembic</p>
+            </Card>
+            <Card className="p-4">
+              <span className="text-emerald-400 font-bold">Distributed Systems</span>
+              <p className="mt-2 text-neutral-300">Microservices, Redis, Celery</p>
+            </Card>
+            <Card className="p-4">
+              <span className="text-emerald-400 font-bold">AI / RAG</span>
+              <p className="mt-2 text-neutral-300">Gemini, LangGraph, RAG, Qdrant, LLM Apps</p>
+            </Card>
+            <Card className="p-4">
+              <span className="text-emerald-400 font-bold">Cloud & K8s</span>
+              <p className="mt-2 text-neutral-300">Azure, AKS, ACR, Kubernetes</p>
+            </Card>
+            <Card className="p-4">
+              <span className="text-emerald-400 font-bold">CI/CD & DevOps</span>
+              <p className="mt-2 text-neutral-300">Jenkins, Docker, GitHub, Git-SHA Tagging</p>
+            </Card>
+            <Card className="p-4">
+              <span className="text-emerald-400 font-bold">Testing & Security</span>
+              <p className="mt-2 text-neutral-300">Pytest, Pytest-Asyncio, Locust, Semgrep, pip-audit</p>
+            </Card>
+            <Card className="p-4">
+              <span className="text-emerald-400 font-bold">Observability</span>
+              <p className="mt-2 text-neutral-300">Prometheus, Grafana, Alertmanager, Slack</p>
+            </Card>
+          </div>
         </div>
       </div>
     </>

@@ -13,7 +13,7 @@ export function HeroSection() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
             <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
           </span>
-          <span>Available for Engineering Roles & Consulting</span>
+          <span>Full Stack Developer at Bridgeon Solutions</span>
         </div>
 
         <h1 className="text-4xl font-extrabold tracking-tight text-neutral-100 sm:text-6xl lg:text-7xl">
@@ -24,8 +24,8 @@ export function HeroSection() {
           {author.title}
         </p>
 
-        <p className="mt-6 text-base sm:text-lg text-neutral-300 leading-relaxed max-w-2xl">
-          {author.bio} Specialize in designing high-throughput REST APIs, asynchronous task workers, microservices backends, and production Retrieval-Augmented Generation (RAG) AI applications.
+        <p className="mt-6 text-base sm:text-lg text-neutral-300 leading-relaxed max-w-3xl">
+          Full Stack Developer at Bridgeon Solutions (joined 2025). From Iritty, Kannur, Kerala, India, holding a Bachelor of Computer Applications (BCA) from Vidya Vikas College, Mysore (2025). Building multi-repository microservices, cloud-native Azure Kubernetes deployments, RAG AI systems, and modern web applications with Python, FastAPI, Django, React, Next.js, and PostgreSQL.
         </p>
 
         <div className="mt-8 flex flex-wrap items-center gap-4">

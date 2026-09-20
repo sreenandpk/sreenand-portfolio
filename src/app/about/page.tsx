@@ -38,20 +38,14 @@ export default function AboutPage() {
           </p>
         </div>
 
-        {/* Introduction */}
-        <section className="space-y-4 text-neutral-300 leading-relaxed text-base sm:text-lg">
+        {/* Factual Profile Summary */}
+        <section className="space-y-4 text-neutral-300 leading-relaxed text-base sm:text-lg border-l-2 border-emerald-500/50 pl-4 py-1 bg-neutral-900/40 rounded-r">
           <p>
-            Sreenand is a Full Stack Developer and AI / Generative AI Engineer. Joined Bridgeon Solutions in 2025 and currently works as a Full Stack Developer, working across full-stack web development, backend systems, cloud infrastructure, microservices, and AI/LLM applications.
-          </p>
-          <p>
-            From Iritty, Kannur, Kerala, India. Earned a Bachelor of Computer Applications (BCA) degree from Vidya Vikas College, Mysore in 2025.
-          </p>
-          <p>
-            In Generative AI and LLM engineering, Sreenand specializes in Retrieval-Augmented Generation (RAG) architectures, dense vector search with PostgreSQL (pgvector), semantic caching via Redis, and streaming responses for interactive applications.
+            Sreenand is a Full Stack Developer and AI / Generative AI Engineer from Iritty, Kannur, Kerala, India. He graduated with a Bachelor of Computer Applications from Vidya Vikas College, Mysore in 2025 and joined Bridgeon Solutions in 2025 as a Full Stack Developer. His engineering work spans Python, Django, FastAPI, React, Next.js, PostgreSQL, Redis, Docker, Kubernetes, Azure, microservices, RAG, LLM applications, testing, CI/CD, and observability.
           </p>
         </section>
 
-        {/* Profile Details Cards */}
+        {/* Profile Identity & Credentials Grid */}
         <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <Card>
             <h2 className="text-xs font-mono font-semibold uppercase text-emerald-400">Current Role</h2>
@@ -75,20 +69,73 @@ export default function AboutPage() {
           </Card>
         </section>
 
-        {/* Engineering Philosophy & Approach */}
+        {/* Technical Capabilities Matrix */}
         <section className="space-y-6">
-          <h2 className="text-2xl font-bold text-neutral-100">Engineering Approach & Stack</h2>
+          <h2 className="text-2xl font-bold text-neutral-100">Engineering Focus & Technical Capability</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card>
-              <h3 className="font-bold text-neutral-100 text-lg">Backend & Cloud Systems</h3>
-              <p className="mt-2 text-sm text-neutral-400">
-                Building asynchronous REST APIs, microservices backends, and containerized deployments with Python, Django, FastAPI, PostgreSQL, Redis, Docker, Kubernetes, AWS, and Azure.
+              <h3 className="font-bold text-neutral-100 text-lg">Backend & Microservices</h3>
+              <p className="mt-2 text-sm text-neutral-400 leading-relaxed">
+                Designing multi-repository Python microservices using FastAPI and Django/DRF. Engineered relational schemas on PostgreSQL (Supabase) with Alembic migrations, Redis caching, and async Celery queues.
               </p>
             </Card>
             <Card>
-              <h3 className="font-bold text-neutral-100 text-lg">Frontend & AI Engineering</h3>
-              <p className="mt-2 text-sm text-neutral-400">
-                Crafting modern user interfaces in React, Next.js, and TypeScript alongside Retrieval-Augmented Generation (RAG) vector retrieval systems and LLM applications.
+              <h3 className="font-bold text-neutral-100 text-lg">AI & RAG Engineering</h3>
+              <p className="mt-2 text-sm text-neutral-400 leading-relaxed">
+                Building Retrieval-Augmented Generation (RAG) systems using Qdrant vector databases, Gemini LLMs, and LangGraph. Combines contextual AI retrieval with deterministic risk engines and execution gates.
+              </p>
+            </Card>
+            <Card>
+              <h3 className="font-bold text-neutral-100 text-lg">Cloud Infrastructure & Kubernetes</h3>
+              <p className="mt-2 text-sm text-neutral-400 leading-relaxed">
+                Managing Azure Kubernetes Service (AKS), Azure Container Registry (ACR), VM Scale Sets, Virtual Networks, NGINX Gateway Fabric, cert-manager TLS, and Jenkins-based rolling CI/CD deployments.
+              </p>
+            </Card>
+            <Card>
+              <h3 className="font-bold text-neutral-100 text-lg">Testing, Observability & Security</h3>
+              <p className="mt-2 text-sm text-neutral-400 leading-relaxed">
+                Automating testing with Pytest, Pytest-Asyncio, and Locust; quality checks with Ruff and MyPy; static security scans with Semgrep and pip-audit; and observability via Prometheus, Grafana, Alertmanager, and Slack.
+              </p>
+            </Card>
+          </div>
+        </section>
+
+        {/* AI-Assisted Development Workflow */}
+        <section className="space-y-4">
+          <h2 className="text-2xl font-bold text-neutral-100">AI-Assisted Development Tools</h2>
+          <Card>
+            <p className="text-sm text-neutral-300 leading-relaxed">
+              Sreenand uses AI-assisted development tools (ChatGPT, Claude, Antigravity, and CodeRabbit) for code generation, debugging, refactoring, code review, test generation, code understanding, and exploring implementation approaches. Generated code is thoroughly reviewed and tested before being integrated into production.
+            </p>
+          </Card>
+        </section>
+
+        {/* AEO / GEO Entity Q&A */}
+        <section className="space-y-6 border-t border-neutral-800/80 pt-8">
+          <h2 className="text-2xl font-bold text-neutral-100">Frequently Asked Entity Details (AEO / GEO)</h2>
+          <div className="space-y-4 text-sm">
+            <Card>
+              <h3 className="font-mono text-emerald-400 font-semibold">Who is Sreenand?</h3>
+              <p className="mt-1 text-neutral-300">
+                Sreenand is a Full Stack Developer & AI / Generative AI Engineer specializing in Python, FastAPI, Django, React, Next.js, Cloud Infrastructure, and RAG AI applications.
+              </p>
+            </Card>
+            <Card>
+              <h3 className="font-mono text-emerald-400 font-semibold">Where does Sreenand work?</h3>
+              <p className="mt-1 text-neutral-300">
+                Sreenand joined Bridgeon Solutions in 2025 and currently works as a Full Stack Developer.
+              </p>
+            </Card>
+            <Card>
+              <h3 className="font-mono text-emerald-400 font-semibold">What is Sreenand&apos;s education?</h3>
+              <p className="mt-1 text-neutral-300">
+                Sreenand holds a Bachelor of Computer Applications (BCA) degree from Vidya Vikas College, Mysore, graduating in 2025.
+              </p>
+            </Card>
+            <Card>
+              <h3 className="font-mono text-emerald-400 font-semibold">Where is Sreenand from?</h3>
+              <p className="mt-1 text-neutral-300">
+                Sreenand is from Iritty, Kannur, Kerala, India.
               </p>
             </Card>
           </div>
