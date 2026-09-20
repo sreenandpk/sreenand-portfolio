@@ -3,7 +3,7 @@ import { ProjectItem } from '@/types/portfolio';
 export const projectsData: ProjectItem[] = [
   {
     slug: 'rag-knowledge-retrieval-engine',
-    title: 'RAG Knowledge Retrieval & Vector Search Engine',
+    title: 'RAG Knowledge Retrieval Engine',
     shortDescription:
       'High-throughput Retrieval-Augmented Generation (RAG) system engineered for semantic document querying and LLM contextual grounding.',
     fullDescription:
@@ -40,7 +40,7 @@ export const projectsData: ProjectItem[] = [
   },
   {
     slug: 'event-driven-microservices-platform',
-    title: 'Event-Driven Microservices Architecture Platform',
+    title: 'Event-Driven Microservices Platform',
     shortDescription:
       'Scalable backend system built with Python, Django, FastAPI, Redis queue workers, and containerized deployment on Kubernetes.',
     fullDescription:
