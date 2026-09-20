@@ -9,7 +9,7 @@ export const siteConfig: SiteConfig = {
   defaultTitle: 'Sreenand P K | Full Stack & AI / Generative AI Engineer',
   titleTemplate: '%s | Sreenand P K',
   description:
-    'Personal portfolio of Sreenand P K - Full Stack Developer and AI / Generative AI Engineer specializing in Python, Django, FastAPI, React, Next.js, TypeScript, LLMs, and Cloud Architecture.',
+    'Portfolio of Sreenand P K - Full Stack & AI Engineer specializing in Python, Django, FastAPI, React, Next.js, TypeScript, LLMs, and cloud architecture.',
   url: siteUrl,
   ogImage: `${siteUrl}/og-image.jpg`,
   author: {
