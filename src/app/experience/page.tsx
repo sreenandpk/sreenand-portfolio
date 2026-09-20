@@ -9,7 +9,7 @@ import { Card } from '@/components/ui/card';
 export const metadata = constructMetadata({
   title: 'Professional Experience Timeline',
   description:
-    'Career history, engineering roles, technical achievements, and backend/full-stack responsibilities of Sreenand P K.',
+    'Career history, engineering roles, technical achievements, and backend/full-stack responsibilities of Sreenand.',
   path: '/experience',
 });
 

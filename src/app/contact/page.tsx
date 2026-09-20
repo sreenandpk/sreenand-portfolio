@@ -7,15 +7,15 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
 export const metadata = constructMetadata({
-  title: 'Contact Sreenand P K',
+  title: 'Contact Sreenand',
   description:
-    'Direct contact channels, phone, and professional profile links for Sreenand P K - Full Stack Developer & AI / Generative AI Engineer.',
+    'Direct contact channels, phone, and professional profile links for Sreenand - Full Stack Developer & AI / Generative AI Engineer.',
   path: '/contact',
 });
 
 export default function ContactPage() {
   const { author } = siteConfig;
-  const webPageSchema = generateWebPageSchema('Contact Sreenand P K', metadata.description as string, '/contact');
+  const webPageSchema = generateWebPageSchema('Contact Sreenand', metadata.description as string, '/contact');
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: 'Home', item: '/' },
     { name: 'Contact', item: '/contact' },

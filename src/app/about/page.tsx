@@ -7,15 +7,15 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
 export const metadata = constructMetadata({
-  title: 'About Sreenand P K',
+  title: 'About Sreenand',
   description:
-    'Full Stack Developer & AI / Generative AI Engineer specializing in Python, Django, FastAPI, React, Next.js, TypeScript, PostgreSQL, Docker, and RAG systems.',
+    'Full Stack Developer & AI / Generative AI Engineer profile for Sreenand, specializing in Python, Django, FastAPI, React, Next.js, and RAG systems.',
   path: '/about',
 });
 
 export default function AboutPage() {
   const { author } = siteConfig;
-  const webPageSchema = generateWebPageSchema('About Sreenand P K', metadata.description as string, '/about');
+  const webPageSchema = generateWebPageSchema('About Sreenand', metadata.description as string, '/about');
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: 'Home', item: '/' },
     { name: 'About', item: '/about' },
@@ -41,27 +41,54 @@ export default function AboutPage() {
         {/* Introduction */}
         <section className="space-y-4 text-neutral-300 leading-relaxed text-base sm:text-lg">
           <p>
-            I am a software engineer focused on building robust full-stack applications, scalable backend microservices, and practical AI systems. My background spans the entire software development lifecycle—from relational data modeling and API architecture to responsive user interfaces and cloud deployments.
+            Sreenand is a Full Stack Developer and AI / Generative AI Engineer. Joined Bridgeon Solutions in 2025 and currently works as a Full Stack Developer, working across full-stack web development, backend systems, cloud infrastructure, microservices, and AI/LLM applications.
           </p>
           <p>
-            In my work with Generative AI and Large Language Models, I specialize in Retrieval-Augmented Generation (RAG) architectures, dense vector search with PostgreSQL (pgvector), semantic caching via Redis, and streaming responses for interactive applications.
+            From Iritty, Kannur, Kerala, India. Earned a Bachelor of Computer Applications (BCA) degree from Vidya Vikas College, Mysore in 2025.
+          </p>
+          <p>
+            In Generative AI and LLM engineering, Sreenand specializes in Retrieval-Augmented Generation (RAG) architectures, dense vector search with PostgreSQL (pgvector), semantic caching via Redis, and streaming responses for interactive applications.
           </p>
         </section>
 
-        {/* Core Competencies Matrix */}
+        {/* Profile Details Cards */}
+        <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <Card>
+            <h2 className="text-xs font-mono font-semibold uppercase text-emerald-400">Current Role</h2>
+            <p className="mt-2 text-lg font-bold text-neutral-100">{author.company?.role}</p>
+            <p className="text-sm font-mono text-neutral-300">{author.company?.name}</p>
+            <p className="mt-2 text-xs text-neutral-400">Joined {author.company?.joinedYear} — Present</p>
+          </Card>
+
+          <Card>
+            <h2 className="text-xs font-mono font-semibold uppercase text-emerald-400">Education</h2>
+            <p className="mt-2 text-lg font-bold text-neutral-100">{author.education?.degree}</p>
+            <p className="text-sm font-mono text-neutral-300">{author.education?.institution}</p>
+            <p className="mt-2 text-xs text-neutral-400">Graduated {author.education?.graduationYear}</p>
+          </Card>
+
+          <Card>
+            <h2 className="text-xs font-mono font-semibold uppercase text-emerald-400">Hometown</h2>
+            <p className="mt-2 text-lg font-bold text-neutral-100">Iritty, Kannur</p>
+            <p className="text-sm font-mono text-neutral-300">Kerala, India</p>
+            <p className="mt-2 text-xs text-neutral-400">From Iritty, Kannur, Kerala, India</p>
+          </Card>
+        </section>
+
+        {/* Engineering Philosophy & Approach */}
         <section className="space-y-6">
-          <h2 className="text-2xl font-bold text-neutral-100">Engineering Philosophy & Approach</h2>
+          <h2 className="text-2xl font-bold text-neutral-100">Engineering Approach & Stack</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card>
-              <h3 className="font-bold text-neutral-100 text-lg">Backend Precision</h3>
+              <h3 className="font-bold text-neutral-100 text-lg">Backend & Cloud Systems</h3>
               <p className="mt-2 text-sm text-neutral-400">
-                Designing explicit database schemas, async request handling in FastAPI/Django, and asynchronous queue processing with Redis.
+                Building asynchronous REST APIs, microservices backends, and containerized deployments with Python, Django, FastAPI, PostgreSQL, Redis, Docker, Kubernetes, AWS, and Azure.
               </p>
             </Card>
             <Card>
-              <h3 className="font-bold text-neutral-100 text-lg">Machine Readability & Performance</h3>
+              <h3 className="font-bold text-neutral-100 text-lg">Frontend & AI Engineering</h3>
               <p className="mt-2 text-sm text-neutral-400">
-                Building web applications engineered for strict Core Web Vitals performance, machine indexability (GEO/AEO), and semantic accessibility.
+                Crafting modern user interfaces in React, Next.js, and TypeScript alongside Retrieval-Augmented Generation (RAG) vector retrieval systems and LLM applications.
               </p>
             </Card>
           </div>

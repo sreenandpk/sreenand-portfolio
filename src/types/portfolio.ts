@@ -4,6 +4,19 @@ export interface SocialLink {
   icon?: string;
 }
 
+export interface EducationInfo {
+  degree: string;
+  institution: string;
+  graduationYear: number;
+  location?: string;
+}
+
+export interface CompanyInfo {
+  name: string;
+  role: string;
+  joinedYear: number;
+}
+
 export interface PersonProfile {
   name: string;
   givenName: string;
@@ -12,6 +25,8 @@ export interface PersonProfile {
   tagline: string;
   bio: string;
   location?: string;
+  education?: EducationInfo;
+  company?: CompanyInfo;
   email?: string;
   websiteUrl: string;
   avatarUrl?: string;

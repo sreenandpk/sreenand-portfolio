@@ -5,20 +5,32 @@ const siteUrl = (
 ).replace(/\/$/, '');
 
 export const siteConfig: SiteConfig = {
-  name: 'Sreenand P K',
-  defaultTitle: 'Sreenand P K | Full Stack & AI / Generative AI Engineer',
-  titleTemplate: '%s | Sreenand P K',
+  name: 'Sreenand',
+  defaultTitle: 'Sreenand | Full Stack & AI / Generative AI Engineer',
+  titleTemplate: '%s | Sreenand',
   description:
-    'Portfolio of Sreenand P K - Full Stack & AI Engineer specializing in Python, Django, FastAPI, React, Next.js, TypeScript, LLMs, and cloud architecture.',
+    'Portfolio of Sreenand - Full Stack & AI Engineer specializing in Python, Django, FastAPI, React, Next.js, TypeScript, LLMs, and cloud architecture.',
   url: siteUrl,
   ogImage: `${siteUrl}/og-image.jpg`,
   author: {
-    name: 'Sreenand P K',
+    name: 'Sreenand',
     givenName: 'Sreenand',
-    familyName: 'P K',
+    familyName: '',
     title: 'Full Stack Developer & AI / Generative AI Engineer',
     tagline: 'Engineering robust full-stack applications and Generative AI systems.',
-    bio: 'Software engineer experienced across Python, Web Development, Cloud Services, Microservices, and AI/LLM applications.',
+    bio: 'Full Stack Developer at Bridgeon Solutions (joined 2025). From Iritty, Kannur, Kerala, India, holding a BCA from Vidya Vikas College, Mysore (2025).',
+    location: 'Iritty, Kannur, Kerala, India',
+    company: {
+      name: 'Bridgeon Solutions',
+      role: 'Full Stack Developer',
+      joinedYear: 2025,
+    },
+    education: {
+      degree: 'Bachelor of Computer Applications (BCA)',
+      institution: 'Vidya Vikas College, Mysore',
+      graduationYear: 2025,
+      location: 'Mysore',
+    },
     websiteUrl: siteUrl,
     socials: {
       github: 'https://github.com/sreenandpk',

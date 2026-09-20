@@ -9,7 +9,7 @@ import { Card } from '@/components/ui/card';
 export const metadata = constructMetadata({
   title: 'Detailed Technical Skills & Technology Matrix',
   description:
-    'Technical skills breakdown for Sreenand P K covering Python, Django, FastAPI, React, Next.js, PostgreSQL, Redis, Docker, AWS, and RAG/LLM AI engineering.',
+    'Technical skills breakdown for Sreenand covering Python, Django, FastAPI, React, Next.js, PostgreSQL, Redis, Docker, AWS, and RAG/LLM AI engineering.',
   path: '/skills',
 });
 

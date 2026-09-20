@@ -8,7 +8,7 @@ import { ProjectCard } from '@/components/projects/project-card';
 export const metadata = constructMetadata({
   title: 'Projects & Case Studies',
   description:
-    'Technical software engineering case studies, system architecture breakdowns, and full-stack project implementations by Sreenand P K.',
+    'Technical software engineering case studies, system architecture breakdowns, and full-stack project implementations by Sreenand.',
   path: '/projects',
 });
 

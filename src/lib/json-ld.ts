@@ -16,22 +16,30 @@ export function generatePersonSchema() {
   if (author.socials.linkedin && author.socials.linkedin.startsWith('http')) {
     sameAs.push(author.socials.linkedin);
   }
-  if (author.socials.instagram && author.socials.instagram.startsWith('http')) {
-    sameAs.push(author.socials.instagram);
-  }
 
   return {
     '@context': 'https://schema.org',
     '@type': 'Person',
     '@id': `${baseUrl}/#person`,
-    name: author.name,
-    givenName: author.givenName,
-    familyName: author.familyName,
+    name: 'Sreenand',
+    givenName: 'Sreenand',
     jobTitle: author.title,
     description: author.bio,
     url: baseUrl,
     sameAs: sameAs.length > 0 ? sameAs : undefined,
     knowsAbout: author.knowsAbout,
+    homeLocation: {
+      '@type': 'Place',
+      name: 'Iritty, Kannur, Kerala, India',
+    },
+    worksFor: {
+      '@type': 'Organization',
+      name: 'Bridgeon Solutions',
+    },
+    alumniOf: {
+      '@type': 'EducationalOrganization',
+      name: 'Vidya Vikas College, Mysore',
+    },
   };
 }
 

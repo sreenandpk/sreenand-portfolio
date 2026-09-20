@@ -8,7 +8,7 @@ import { ArticleCard } from '@/components/blog/article-card';
 export const metadata = constructMetadata({
   title: 'Engineering Writing & Thought Leadership',
   description:
-    'Technical articles, architectural deep dives, and software guides written by Sreenand P K on Full Stack Development, Microservices, and AI Engineering.',
+    'Technical articles, architectural deep dives, and software guides written by Sreenand on Full Stack Development, Microservices, and AI Engineering.',
   path: '/blog',
 });
 
