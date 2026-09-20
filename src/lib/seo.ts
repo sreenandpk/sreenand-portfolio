@@ -77,5 +77,8 @@ export function constructMetadata({
       shortcut: '/favicon.ico',
       apple: '/icon.svg',
     },
+    verification: {
+      google: 'mmXoNyCkDueX-q2tihDmZVClL22y_OTVh6gD9h2qMHI',
+    },
   };
 }
