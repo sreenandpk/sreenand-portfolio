@@ -25,15 +25,18 @@ if (!fs.existsSync(robotsTsPath)) {
   console.log('PASS: robots.ts verified.');
 }
 
-// 3. Inspect siteConfig.ts for canonical URL hygiene
+// 3. Inspect siteConfig.ts for canonical URL hygiene and Vercel domain
 const siteConfigPath = path.join(baseDir, 'src', 'config', 'site.ts');
 if (fs.existsSync(siteConfigPath)) {
   const content = fs.readFileSync(siteConfigPath, 'utf8');
-  if (content.includes("url: 'https://") && !content.includes("url: 'https://") && content.includes('/\'')) {
-    console.error('FAIL: Trailing slash detected in siteConfig.url.');
+  if (content.includes('sreenandpk.dev') || content.includes('seo-aeo-geo-website-nine.vercel.app')) {
+    console.error('FAIL: Obsolete domain detected in siteConfig.ts.');
+    hasErrors = true;
+  } else if (!content.includes('sreenand-pk-portfolio.vercel.app')) {
+    console.error('FAIL: Canonical production domain sreenand-pk-portfolio.vercel.app not found in siteConfig.ts.');
     hasErrors = true;
   } else {
-    console.log('PASS: Centralized site configuration origin clean.');
+    console.log('PASS: Centralized site configuration production origin verified.');
   }
 }
 

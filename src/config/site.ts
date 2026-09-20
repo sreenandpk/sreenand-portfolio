@@ -1,6 +1,8 @@
 import { SiteConfig } from '@/types/portfolio';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://sreenandpk.dev';
+const siteUrl = (
+  process.env.NEXT_PUBLIC_SITE_URL || 'https://sreenand-pk-portfolio.vercel.app'
+).replace(/\/$/, '');
 
 export const siteConfig: SiteConfig = {
   name: 'Sreenand P K',
