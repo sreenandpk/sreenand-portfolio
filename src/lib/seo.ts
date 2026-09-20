@@ -17,8 +17,8 @@ export function constructMetadata({
   noIndex = false,
 }: MetadataOptions = {}): Metadata {
   const baseUrl = siteConfig.url.replace(/\/$/, '');
-  const cleanPath = path ? (path.startsWith('/') ? path : `/${path}`) : '';
-  const canonicalUrl = `${baseUrl}${cleanPath}`;
+  const normalizedPath = path && path !== '/' ? (path.startsWith('/') ? path : `/${path}`).replace(/\/$/, '') : '';
+  const canonicalUrl = `${baseUrl}${normalizedPath || '/'}`;
 
   let fullTitle: string;
   if (!title) {

@@ -55,13 +55,14 @@ export function generateWebSiteSchema() {
 
 export function generateWebPageSchema(title: string, description: string, path: string) {
   const baseUrl = getBaseUrl();
-  const cleanPath = path ? (path.startsWith('/') ? path : `/${path}`) : '';
-  const pageUrl = `${baseUrl}${cleanPath}`;
+  const normalizedPath = path && path !== '/' ? (path.startsWith('/') ? path : `/${path}`).replace(/\/$/, '') : '';
+  const pageUrl = normalizedPath ? `${baseUrl}${normalizedPath}` : `${baseUrl}/`;
+  const webpageId = normalizedPath ? `${baseUrl}${normalizedPath}#webpage` : `${baseUrl}/#webpage`;
 
   return {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    '@id': `${pageUrl}/#webpage`,
+    '@id': webpageId,
     url: pageUrl,
     name: title,
     description: description,
@@ -82,9 +83,15 @@ export function generateBreadcrumbSchema(items: BreadcrumbItem[]) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: items.map((item, index) => {
-      const cleanItem = item.item.startsWith('http')
-        ? item.item
-        : `${baseUrl}${item.item.startsWith('/') ? item.item : `/${item.item}`}`;
+      let cleanItem: string;
+      if (item.item.startsWith('http')) {
+        cleanItem = item.item;
+      } else if (item.item === '/' || item.item === '') {
+        cleanItem = `${baseUrl}/`;
+      } else {
+        const p = item.item.startsWith('/') ? item.item : `/${item.item}`;
+        cleanItem = `${baseUrl}${p.replace(/\/$/, '')}`;
+      }
 
       return {
         '@type': 'ListItem',
@@ -103,7 +110,7 @@ export function generateProjectSchema(project: ProjectItem) {
   return {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
-    '@id': `${projectUrl}/#software`,
+    '@id': `${projectUrl}#software`,
     name: project.title,
     description: project.shortDescription,
     url: projectUrl,
@@ -124,7 +131,7 @@ export function generateArticleSchema(article: ArticleItem) {
   return {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
-    '@id': `${articleUrl}/#article`,
+    '@id': `${articleUrl}#article`,
     headline: article.title,
     description: article.description,
     url: articleUrl,
